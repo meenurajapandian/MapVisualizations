@@ -1,3 +1,9 @@
+## Geography data
+
+https://www.census.gov/programs-surveys/geography.html
+https://help.github.com/en/github/creating-cloning-and-archiving-repositories/duplicating-a-repository
+
+# Notes from original Author erdavis1/RoadColors
 # RoadColors
 
 United States:
