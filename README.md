@@ -1,9 +1,34 @@
-## Geography data
+# Geography data
 
-https://www.census.gov/programs-surveys/geography.html
-https://help.github.com/en/github/creating-cloning-and-archiving-repositories/duplicating-a-repository
+### Open Street Map
 
-# Notes from original Author erdavis1/RoadColors
+Open source data of everything that goes on map - Haven't yet figured out how to extract data beyond nodes and relations
+Files downloaded are in XML or OSM
+
+https://www.openstreetmap.org/export#map=15/40.4402/-79.9664
+
+Need to use Overpass API to download a lot of data
+
+
+### Microsoft Building Footprints
+
+Building footprints of a lot of places. Not comprehensive I think
+https://github.com/Microsoft/USBuildingFootprints
+
+
+Check this cool NYTimes article for what it can do.
+https://www.nytimes.com/interactive/2018/10/12/us/map-of-every-building-in-the-united-states.html
+
+Files downloaded are in GeoJSON format
+
+
+#### Converting OSM to GeoJSON
+
+https://pypi.org/project/osm2geojson/
+Haven't tried it yet
+
+
+# Notes from original Author for road colors erdavis1/RoadColors
 # RoadColors
 
 United States:

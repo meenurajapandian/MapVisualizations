@@ -151,6 +151,3 @@ ggsave(paste0("./", city, ".png"), plot = last_plot(),
        dpi = 600)
 
 
-
-
-
