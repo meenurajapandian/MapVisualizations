@@ -18,10 +18,12 @@ rad <- 19140.2
 #-------import road files.----------
 files <- list.files(path="./FeatNames", pattern="*.dbf", full.names=TRUE, recursive=FALSE) %>% as.data.frame
 names(files) <- c("path")
-files$GEOID <- substr(files$path, 21, 25)
+files$GEOID <- substr(files$path, 21, 25) # Gets the GEOID from the files path to get corresponding roads file
 files <- subset(files, GEOID %in% geoid)
 
 allroads <-NULL
+
+# SUFTYPABRV from featname has the type of road; roads data has all the dimensions of roads for plotting
 
 #----------combine em all and add suffixes--------------
 for (i in 1:nrow(files)) {

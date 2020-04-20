@@ -21,11 +21,26 @@ https://www.nytimes.com/interactive/2018/10/12/us/map-of-every-building-in-the-u
 
 Files downloaded are in GeoJSON format
 
+### Data that is actualy used
+http://download.geofabrik.de/north-america/us/pennsylvania.html
+https://www.r-spatial.org/r/2018/10/25/ggplot2-sf.html
+
 
 #### Converting OSM to GeoJSON
 
 https://pypi.org/project/osm2geojson/
 Haven't tried it yet
+
+### Other things that were found but of no use
+https://www.census.gov/geographies/mapping-files/time-series/geo/tiger-line-file.html
+https://www.census.gov/geographies/mapping-files/time-series/geo/carto-boundary-file.html
+https://freegisdata.rtwilson.com/
+http://www.poi-factory.com/node/6348
+https://libguides.mit.edu/gis/buildings
+https://www.sciencebase.gov/catalog/item/5775469ce4b07dd077c7088a
+https://uhcl.libguides.com/gis-data/GIS/data/us
+https://towardsdatascience.com/loading-data-from-openstreetmap-with-python-and-the-overpass-api-513882a27fd0
+
 
 
 # Notes from original Author for road colors erdavis1/RoadColors
