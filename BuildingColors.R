@@ -13,16 +13,18 @@ geoid <-  c('42003')
 rad <- 19140.2
 
 
-featname <- read.dbf("OSM_Pennsylvania/gis_osm_buildings_a_free_1.dbf",  as.is = TRUE)
-buildings <- read_sf("./OSM_Pennsylvania","gis_osm_buildings_a_free_1")
-allbuildings <- inner_join(buildings, featname, by = "osm_id") 
+featname <- read.dbf("OSM_Pennsylvania/gis_osm_buildings_a_free_1.dbf",  as.is = TRUE) # list of buildings
+buildings <- read_sf("./OSM_Pennsylvania","gis_osm_buildings_a_free_1") # building shapes
+pofw <- read_sf("./OSM_Pennsylvania", "gis_osm_pofw_a_free_1")
+allbuildings <- rbind
+
+#allbuildings <- inner_join(buildings, featname, by = "osm_id") 
 
 ## Subset the building in a circle ------------
 pt <- pt %>% st_as_sf(coords = c("long", "lat"), crs = 4326) %>% st_transform(2163)
 circle <- st_buffer(pt, dist = rad)
 circle <- circle %>% st_transform(st_crs(allbuildings))
 allbuildings <- st_intersection(circle, allbuildings)
-
 
 
 blankbg <-theme(axis.line=element_blank(),axis.text.x=element_blank(),
@@ -32,7 +34,7 @@ blankbg <-theme(axis.line=element_blank(),axis.text.x=element_blank(),
                 panel.grid.minor=element_blank(),plot.background=element_blank())
 
 ggplot() + blankbg + theme(panel.grid.major = element_line(colour = "transparent")) + 
-  geom_sf(data=allbuildings, size = .45)
+  geom_sf(data=allbuildings, size = .25)
 
 ggsave(paste0("./", city, "buildings.png"), plot = last_plot(),
        scale = 1, width = 24, height = 24, units = "in",
